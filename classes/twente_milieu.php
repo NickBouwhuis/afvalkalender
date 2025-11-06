@@ -8,6 +8,9 @@ class TwenteMilieu {
   const company_code          = '8d97bb56-5afd-4cbc-a651-b4f7314264b4';
   const api_domain            = 'https://twentemilieuapi.ximmio.com/api';
 
+  public string $postcode;
+  public string $huisnummer;
+
   public function __construct($unsafe_postcode, $unsafe_huisnummer) {
     $this->postcode   = $this->safePostcode($unsafe_postcode);
     $this->huisnummer = $this->safeHuisnummer($unsafe_huisnummer);

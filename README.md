@@ -4,6 +4,14 @@
 
 _scratch your own itch_
 
+## Publieke versie
+
+https://afvalkalender.0x5e.eu/
+
+of subscribe direct
+```
+https://afvalkalender.0x5e.eu/ical/<postcode>/<huisnummer>
+```
 ## Intro
 
 Ik weet niet hoe dat in andere regio's zit, maar Twente Milieu heeft de iCal download van haar website verwijderd
@@ -33,6 +41,26 @@ Ik heb gekozen voor optie nummer drie. Maar dan wel geautomatiseerd. En met een 
 
 Nodig:
  * Git
+ * Dodkcer
+
+1. Clone de repo
+```bash
+git clone https://github.com/nickbouwhuis/afvalkalender
+```
+
+2. Start de container
+```bash
+docker compose up
+```
+
+3. ???
+
+4. Garbage!
+
+## Installatie zonder Docker
+
+Nodig:
+ * Git
  * Webserver die PHP draait
  * libcurl
 
@@ -55,7 +83,7 @@ sudo chown -R www-data:www-data cache
 ## Contact
 
 ### Feedback / lof / kritiek?
-mail@timendus.com
+mail@timendus.com of nick.bouwhuis.net/contact
 
 ### Verbeteringen?
 Ik zie de pull request wel verschijnen ;)

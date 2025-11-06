@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    container_name: afvalkalender
+    volumes:
+      - ./cache:/var/www/html/cache
+    ports:
+      - "80:80"
+    restart: unless-stopped
+

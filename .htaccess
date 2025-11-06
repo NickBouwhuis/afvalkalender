@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Route /ical/<postcode>/<huisnummer> to ical.php (internal rewrite, no redirect)
+# Match postcode (4 digits + 2 letters, case insensitive) and huisnummer (digits)
+RewriteRule ^ical/([0-9]{4}[A-Za-z]{2})/([0-9]+)/?$ ical.php?postcode=$1&huisnummer=$2 [L,QSA,NC]
+

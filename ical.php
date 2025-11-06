@@ -7,7 +7,15 @@ try {
   require 'classes/twente_milieu.php';
   require 'classes/ical.php';
 
-  $afvalkalender  = new TwenteMilieu($_GET['postcode'], $_GET['huisnummer']);
+  // Support both query parameters (for backwards compatibility) and path-based routing
+  $postcode = $_GET['postcode'] ?? null;
+  $huisnummer = $_GET['huisnummer'] ?? null;
+
+  if ( !$postcode || !$huisnummer ) {
+    throw new Exception("Postcode en huisnummer zijn verplicht");
+  }
+
+  $afvalkalender  = new TwenteMilieu($postcode, $huisnummer);
   $ical_generator = new iCal('TwenteMilieu', 'Afvalkalender');
 
   // Find first of this month

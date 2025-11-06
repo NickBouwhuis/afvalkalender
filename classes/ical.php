@@ -2,6 +2,9 @@
 
 class iCal {
 
+  public string $organisation;
+  public string $calendarname;
+
   function __construct($organisation, $calendarname) {
     $this->organisation = $organisation;
     $this->calendarname = $calendarname;
